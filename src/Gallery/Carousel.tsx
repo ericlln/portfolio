@@ -13,7 +13,7 @@ export default function Carousel({ children, ...options }: CarouselProps) {
 	const canScrollPrev = !!emblaApi?.canScrollPrev;
 
 	return (
-		<div className="overflow-hidden static" ref={emblaRef}>
+		<div className="overflow-hidden" ref={emblaRef}>
 			<div className="flex mb-4">{children}</div>
 			<CarouselControls
 				canScrollNext={canScrollNext}

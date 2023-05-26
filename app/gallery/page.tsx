@@ -1,7 +1,7 @@
+import prisma from '@/lib/prisma';
+
 import Navbar from '@/src/Navbar/Navbar';
 import Gallery from '@/src/Gallery/Gallery';
-
-import prisma from '@/lib/prisma';
 
 async function getData() {
 	const res = await prisma.gallery.findMany();
