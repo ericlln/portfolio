@@ -3,18 +3,28 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
   provider = "mysql"
   url = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  relationMode = "prisma"
 }
 
 model gallery {
 id      Int   @default(autoincrement()) @id
 url     String
-month   String
-year    String
+season  String?
+year    String?
+}
+
+model projects {
+id            Int   @default(autoincrement()) @id
+title         String
+description   String
+technologies  String?
+markdown      String?   
+thumbnail     String?
+link          String?
+order         Int?
 }

@@ -12,10 +12,10 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				'font-sans': ['Manrope'],
-				title: ['"Markazi Text"']
+				title: ['"Markazi Text"'],
 			},
-			colors: {highlight: '#8ea7a0'},
+			colors: { highlight: '#8ea7a0' },
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 };
