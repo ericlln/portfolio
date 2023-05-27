@@ -29,9 +29,15 @@ export default async function Project({ params }: { params: { id: string } }) {
 		<div>
 			<Navbar />
 			{blog ? (
-				<div className="w-2/3 mx-auto mt-12">
+				<div className='flex h-screen'>
+
+				<div className=" m-auto mt-12">
 					<h1 className="text-2xl font-semibold mb-4">{blog!.title}</h1>
+					<div className='prose lg:prose-md'>
 					<ReactMarkdown children={blog!.markdown!} remarkPlugins={[remarkGfm]} />
+						</div>
+					
+				</div>
 				</div>
 			) : (
 				<div className="flex h-screen">
