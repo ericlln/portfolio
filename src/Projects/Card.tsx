@@ -1,4 +1,9 @@
+'use client';
+
+import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import Technology from './Technology';
 
 interface CardProps {
@@ -8,18 +13,38 @@ interface CardProps {
 	technologies?: string | null;
 	thumbnail?: string | null;
 	link?: string | null;
+	hasBlog?: boolean | null;
+	i: number;
 }
 
-export default function Card({ id, title, description, technologies, thumbnail, link }: CardProps) {
+export default function Card({
+	id,
+	title,
+	description,
+	technologies,
+	thumbnail,
+	link,
+	hasBlog,
+	i,
+}: CardProps) {
 	return (
 		<div className="w-full">
-			<div className="flex bg-gray-100 rounded-lg py-8 px-10 justify-between hover:bg-gray-300 ease-in duration-200">
+			<div
+				className={classNames({
+					'flex rounded-lg py-8 px-10 justify-between': true,
+					'bg-gray-100': i % 2 == 0,
+					'bg-gray-200': !(i % 2 == 0),
+				})}
+			>
 				<div className="w-7/12">
 					<div className="flex">
 						<h1 className="text-xl font-semibold mb-4 mr-1">{title}</h1>
 						{link && (
 							<a href={link}>
-								<button type="button" className="text-gray-500 hover:text-highlight hover:scale-110 p-1 ease-in duration-100">
+								<button
+									type="button"
+									className="text-gray-500 hover:text-highlight hover:scale-110 p-1 ease-in duration-100"
+								>
 									<svg
 										aria-hidden="true"
 										className="w-5 h-5"
@@ -35,6 +60,11 @@ export default function Card({ id, title, description, technologies, thumbnail, 
 					</div>
 					<Technology technologies={technologies} />
 					<p className="text-sm mb-2 leading-8">{description}</p>
+					{hasBlog && (
+						<Link href={`/projects/${id}`} className="text-sm text-cyan-800 text-semibold underline hover:no-underline ease-in duration-100">
+							Learn More
+						</Link>
+					)}
 				</div>
 				<div>
 					{thumbnail && (

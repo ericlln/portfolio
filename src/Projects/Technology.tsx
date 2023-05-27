@@ -10,7 +10,7 @@ export default function Technology({ technologies }: TechologyProps) {
 			<div className="flex">
 				{array &&
 					array.map((technology) => (
-						<div key={technology} className="p-1.5 bg-gray-500 mr-4 rounded-xl">
+						<div key={technology} className="py-1 px-2 bg-gray-500 mr-3 rounded-xl">
 							<h1 className="text-sm text-white">{technology}</h1>
 						</div>
 					))}

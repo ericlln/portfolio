@@ -23,7 +23,8 @@ id            Int   @default(autoincrement()) @id
 title         String
 description   String
 technologies  String?
-markdown      String?   
+markdown      String?
+hasBlog       Boolean?   
 thumbnail     String?
 link          String?
 order         Int?
