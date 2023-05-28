@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const Navbar = () => {
 	return (
-		<nav className="border-b-2 border-gray-300">
-			<div className="px-12 py-3 mx-auto">
-				<div className="flex justify-between">
+		<nav className="border-b-2 border-gray-300 z-50 top-0 sticky backdrop-filter backdrop-blur hover:backdrop-blur-none hover:bg-white ease-in duration-200">
+			<div className="px-0 sm:px-12 py-3 mx-auto">
+				<div className="flex justify-center sm:justify-between">
 					<Link href="/">
-						<div className="flex h-max mt-0 ring-2 text-gray-500 ring-highlight hover:bg-highlight hover:text-white rounded-full py-1 px-6 ease-in duration-100">
+						<div className="flex h-max mt-1 ring-2 text-gray-500 ring-highlight hover:bg-highlight hover:text-white rounded-full py-0.5 px-6 ease-in duration-100">
 							<button
 								type="button"
 								className=""
