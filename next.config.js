@@ -10,10 +10,10 @@ const nextConfig = {
 			},
 			{
 				protocol: 'https',
-				hostname: '**.googleusercontent.com',
+				hostname: 'i.ibb.co',
 				port: '',
-				pathname: '/**'
-			}
+				pathname: '/**',
+			},
 		],
 	},
 };
