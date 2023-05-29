@@ -3,6 +3,8 @@ import prisma from '@/lib/prisma';
 import Navbar from '@/src/Navbar/Navbar';
 import Card from '@/src/Projects/Card';
 
+export const revalidate = 0;
+
 async function getData() {
 	const res = await prisma.projects.findMany({
 		select: { id: true, title: true, description: true, technologies: true, thumbnail: true, link: true, hasBlog: true},

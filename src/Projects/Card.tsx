@@ -28,8 +28,8 @@ export default function Card({
 	return (
 		<div
 			className={classNames({
-				'flex-col xl:flex-row': true,
-				'flex rounded-lg py-8 px-10 justify-between space-0 xl:space-x-10': true,
+				'flex flex-col xl:flex-row': true,
+				'rounded-lg py-8 px-10 xl:space-x-10': true,
 				'bg-gray-100': i % 2 == 0,
 				'bg-gray-200': !(i % 2 == 0),
 			})}
