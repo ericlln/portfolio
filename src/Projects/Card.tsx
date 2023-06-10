@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,14 +25,7 @@ export default function Card({
 	i,
 }: CardProps) {
 	return (
-		<div
-			className={classNames({
-				'flex flex-col xl:flex-row': true,
-				'rounded-lg py-8 px-10 xl:space-x-10': true,
-				'bg-gray-100': i % 2 == 0,
-				'bg-gray-200': !(i % 2 == 0),
-			})}
-		>
+		<div className="flex flex-col bg-gray-100 rounded-lg py-8 px-10 xl:flex-row xl:space-x-10">
 			<div className="flex-col basis-2/3">
 				<div className="flex">
 					<h1 className="text-xl font-semibold mb-4 mr-1">{title}</h1>

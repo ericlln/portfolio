@@ -14,11 +14,11 @@ export default async function Photos() {
 	const images = await getData();
 
 	return (
-		<div>
+		<>
 			<Navbar />
 			<div className='w-3/4 mx-auto my-10'>
 				<Gallery images={images} />
 			</div>
-		</div>
+		</>
 	);
 }
