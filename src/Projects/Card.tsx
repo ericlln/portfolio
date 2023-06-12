@@ -25,8 +25,8 @@ export default function Card({
 	i,
 }: CardProps) {
 	return (
-		<div className="flex flex-col bg-gray-100 rounded-lg py-8 px-10 xl:flex-row xl:space-x-10">
-			<div className="flex-col basis-2/3">
+		<div className="flex flex-col bg-gray-100 rounded-lg p-8 xl:flex-row xl:space-x-10">
+			<div className="flex-col basis-11/12">
 				<div className="flex">
 					<h1 className="text-xl font-semibold mb-4 mr-1">{title}</h1>
 					{link && (
@@ -49,9 +49,7 @@ export default function Card({
 					)}
 				</div>
 
-				<div className="">
-					<Technology technologies={technologies} />
-				</div>
+				<Technology technologies={technologies} />
 
 				<p className="text-sm mb-2 leading-8">{description}</p>
 				{hasBlog && (
@@ -64,14 +62,14 @@ export default function Card({
 				)}
 			</div>
 
-			<div className="basis-1/3 order-first mb-6 xl:mb-0 xl:order-last">
+			<div className="flex basis-1/2 mb-6 order-first justify-items-center xl:mb-0 xl:order-last xl:justify-end">
 				{thumbnail && (
 					<Image
 						src={thumbnail}
 						alt="alt"
 						width={300}
 						height={0}
-						className="shadow-gray-600 shadow-md"
+						className="self-start basis-1/2 shrink-0 shadow-gray-600 shadow-md"
 					/>
 				)}
 			</div>
