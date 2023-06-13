@@ -30,7 +30,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 			<Navbar />
 			{blog ? (
 				<div className="flex h-screen">
-					<div className=" m-auto mt-12">
+					<div className="m-auto mt-12 px-8">
 						<h1 className="text-highlight text-2xl font-semibold mb-4">{blog!.title}</h1>
 						<div className="prose lg:prose-md mb-12">
 							<ReactMarkdown remarkPlugins={[remarkGfm]}>{blog!.markdown!}</ReactMarkdown>
