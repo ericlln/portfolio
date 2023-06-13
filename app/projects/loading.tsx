@@ -14,7 +14,7 @@ export default function LoadingProjects() {
 						<div className="flex flex-col basis-2/3">
 							<TextPlaceholder />
 						</div>
-						<div className="basis-1/3 order-first mb-6 xl:mb-0 xl:order-last">
+						<div className="flex basis-1/2 mb-6 order-first justify-items-center xl:mb-0 xl:order-last xl:justify-end">
 							<ImagePlaceholder />
 						</div>
 					</div>

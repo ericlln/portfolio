@@ -1,6 +1,6 @@
 export default function ImagePlaceholder() {
 	return (
-		<div className="flex max-w-[300px] h-[225px] bg-gray-300">
+		<div className="flex w-[300px] h-[225px] bg-gray-300">
 			<div className="m-auto">
 				<svg
 					className="w-12 h-12 text-white"
