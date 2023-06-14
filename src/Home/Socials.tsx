@@ -3,10 +3,7 @@ const Socials = () => {
 		<div className="flex">
 			<div className="mr-4">
 				<a href="https://www.linkedin.com/in/ericlinsp/">
-					<button
-						type="button"
-						className="text-gray-500 border-2 border-highlight hover:text-white hover:bg-highlight p-2.5 ease-in duration-150"
-					>
+					<button className="text-gray-500 border-2 border-highlight hover:text-white hover:bg-highlight p-2.5 ease-in duration-150">
 						<svg
 							aria-hidden="true"
 							className="w-5 h-5"
@@ -21,10 +18,7 @@ const Socials = () => {
 			</div>
 			<div className="mr-4">
 				<a href="https://github.com/ericlln">
-					<button
-						type="button"
-						className="text-gray-500 border-2 border-highlight hover:text-white hover:bg-highlight p-2.5 ease-in duration-150"
-					>
+					<button className="text-gray-500 border-2 border-highlight hover:text-white hover:bg-highlight p-2.5 ease-in duration-150">
 						<svg
 							aria-hidden="true"
 							className="w-5 h-5"
@@ -39,10 +33,7 @@ const Socials = () => {
 			</div>
 			<div className="mr-4">
 				<a href="mailto:es3lin@uwaterloo.ca">
-					<button
-						type="button"
-						className="text-gray-500 border-2 border-highlight hover:text-white hover:bg-highlight p-2.5 ease-in duration-150"
-					>
+					<button className="text-gray-500 border-2 border-highlight hover:text-white hover:bg-highlight p-2.5 ease-in duration-150">
 						<svg
 							aria-hidden="true"
 							className="w-5 h-5"

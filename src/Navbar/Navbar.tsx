@@ -7,7 +7,7 @@ const Navbar = () => {
 			<div className="px-0 sm:px-12 py-3 mx-auto">
 				<div className="flex justify-center sm:justify-between">
 					<Link href="/">
-						<div className="flex h-max mt-1 ring-2 text-gray-500 ring-highlight hover:bg-highlight hover:text-white rounded-full py-0.5 px-6 ease-in duration-100">
+						<div className="flex h-max mt-1 ring-2 text-gray-500 ring-highlight hover:bg-highlight hover:text-white rounded-full py-0.5 px-1 sm:px-6 ease-in duration-100">
 							<button
 								type="button"
 								className=""
