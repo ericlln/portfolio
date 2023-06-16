@@ -27,7 +27,7 @@ const Navbar = () => {
 					<div className="flex mt-1">
 						<NavbarButton href="/projects">Projects</NavbarButton>
 						<NavbarButton href="/gallery">Gallery</NavbarButton>
-						<NavbarButton href="https://www.google.com" externalLink={true}>
+						<NavbarButton href="https://drive.google.com/file/d/1dobjxT7Mmv2B3Zu_wd9YbQx5VLh57_eI/view?usp=sharing" externalLink={true}>
 							Resume
 						</NavbarButton>
 					</div>
