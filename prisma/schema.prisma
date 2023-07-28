@@ -14,8 +14,8 @@ datasource db {
 model gallery {
 id      Int   @default(autoincrement()) @id
 url     String
-season  String?
-year    String?
+season  Int?
+year    Int?
 }
 
 model projects {
