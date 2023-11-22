@@ -3,11 +3,11 @@ import Heading from '@/src/Home/Heading';
 import Navbar from '@/src/Navbar/Navbar';
 
 export default function Home() {
-	return (
-		<>
-			<Background />
-			<Navbar />
-			<Heading />
-		</>
-	);
+    return (
+        <>
+            <Background />
+            <Navbar />
+            <Heading />
+        </>
+    );
 }

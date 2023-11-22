@@ -12,17 +12,16 @@ datasource db {
 }
 
 model gallery {
-id      Int   @default(autoincrement()) @id
-url     String
-season  Int?
-year    Int?
+id            Int   @default(autoincrement()) @id
+url           String
+dateAdded     DateTime?
 }
 
 model projects {
 id            Int   @default(autoincrement()) @id
 title         String
 description   String
-technologies  String?
+skills        String?
 markdown      String?
 hasBlog       Boolean?   
 thumbnail     String?
