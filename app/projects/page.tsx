@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma';
+import prisma from '@/prisma/db';
 
 import Navbar from '@/src/Navbar/Navbar';
 import Card from '@/src/Projects/Card';
