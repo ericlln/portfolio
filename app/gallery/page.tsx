@@ -1,4 +1,4 @@
-import prisma from '@/prisma/db';
+import prisma from '@/lib/prisma';
 
 import Navbar from '@/src/Navbar/Navbar';
 import Gallery from '@/src/Gallery/Gallery';

@@ -1,4 +1,4 @@
-import prisma from '@/prisma/db';
+import prisma from '@/lib/prisma';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import remarkGfm from 'remark-gfm';
 
