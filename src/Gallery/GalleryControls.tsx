@@ -26,14 +26,15 @@ const monthNames = [
 
 interface Props {
     monthYears: { [key: string]: number };
-    currMonthYear: Date;
+    currMonthYear: string;
 }
 
 const GalleryControls = ({ monthYears, currMonthYear }: Props) => {
     const [modal, setModal] = useState(false);
 
-    const date = currMonthYear;
-    const month = monthNames[currMonthYear.getMonth()];
+    const month = parseInt(currMonthYear.slice(0, 2)) - 1;
+    const monthString = monthNames[month];
+    const year = currMonthYear.slice(2, 6);
 
     const toggleModal = () => {
         setModal(!modal);
@@ -48,7 +49,7 @@ const GalleryControls = ({ monthYears, currMonthYear }: Props) => {
                         onClick={toggleModal}
                         className="text-md inline-flex w-full gap-x-2 rounded-md bg-white px-3 py-2 font-semibold text-gray-900 ring-1 ring-inset ring-gray-300"
                     >
-                        {`${month} ${date.getFullYear()}`}
+                        {`${monthString} ${year}`}
                         <svg
                             className="mr-1 h-5 w-5 text-gray-400"
                             viewBox="0 0 20 20"

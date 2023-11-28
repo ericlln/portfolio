@@ -66,10 +66,7 @@ export default async function Photos({ params }: { params: { monthYear: string }
                 {monthYear.length === 6 ? (
                     images.length !== 0 ? (
                         <div className="mx-auto my-10 w-3/4">
-                            <GalleryControls
-                                monthYears={monthYears}
-                                currMonthYear={monthYearDate}
-                            />
+                            <GalleryControls monthYears={monthYears} currMonthYear={monthYear} />
                             <Gallery images={images} />
                         </div>
                     ) : (
@@ -81,7 +78,7 @@ export default async function Photos({ params }: { params: { monthYear: string }
                                     </h1>
                                     <GalleryControls
                                         monthYears={monthYears}
-                                        currMonthYear={monthYearDate}
+                                        currMonthYear={monthYear}
                                     />
                                 </div>
                             </div>
