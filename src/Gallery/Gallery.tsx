@@ -27,7 +27,7 @@ export default function Gallery({ images }: ImageArray) {
                             <Image
                                 key={i}
                                 src={image.url}
-                                width={400}
+                                width={500}
                                 height={400}
                                 alt="alt"
                                 onLoad={() => setLoading(false)}
