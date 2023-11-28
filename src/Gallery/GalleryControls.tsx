@@ -3,22 +3,37 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-interface Props {
-    monthYears: { [key: string]: number };
-    currMonthYear: Date;
-}
-
 const convertForComparison = (monthYear: string): number => {
     const year = monthYear.slice(2);
     const month = monthYear.slice(0, 2);
     return parseInt(year + month);
 };
 
+const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+];
+
+interface Props {
+    monthYears: { [key: string]: number };
+    currMonthYear: Date;
+}
+
 const GalleryControls = ({ monthYears, currMonthYear }: Props) => {
     const [modal, setModal] = useState(false);
 
     const date = currMonthYear;
-    const month = date.toLocaleString('default', { month: 'long' });
+    const month = monthNames[currMonthYear.getMonth()];
 
     const toggleModal = () => {
         setModal(!modal);
