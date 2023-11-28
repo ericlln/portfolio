@@ -57,7 +57,11 @@ const GalleryControls = ({ monthYears, currMonthYear }: Props) => {
                                         convertForComparison(keyB) - convertForComparison(keyA),
                                 )
                                 .map(([key, value]) => (
-                                    <Link href={`/gallery/${key}`} className="mb-2 underline">
+                                    <Link
+                                        key={key}
+                                        href={`/gallery/${key}`}
+                                        className="mb-2 underline"
+                                    >
                                         {key.slice(2, 6)}-{key.slice(0, 2)} ({value})
                                     </Link>
                                 ))}
