@@ -14,7 +14,7 @@ export default function Carousel({ children, ...options }: CarouselProps) {
 
     return (
         <div className="overflow-hidden" ref={emblaRef}>
-            <div className="mb-4 flex">{children}</div>
+            <div className="mb-6 flex">{children}</div>
             <CarouselControls
                 canScrollNext={canScrollNext}
                 canScrollPrev={canScrollPrev}
