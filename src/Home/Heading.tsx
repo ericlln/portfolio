@@ -15,7 +15,7 @@ const Heading = () => {
                 <div className="mb-8 flex justify-center sm:justify-start">
                     <Socials />
                 </div>
-                <p className="w-max-w text-center leading-8 sm:text-left md:w-1/4">
+                <p className="w-max-w text-center leading-8 md:w-1/2 md:text-left lg:w-1/3 xl:w-1/4">
                     Hi, I am currently a first year student at University of Waterloo! I am
                     interested in all aspects of software development, especially after my recent
                     internship where I worked in full-stack development. You can read more about my
