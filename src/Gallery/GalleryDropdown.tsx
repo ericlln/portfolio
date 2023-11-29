@@ -24,6 +24,9 @@ const GalleryDropdown = ({ monthYears, currMonthYear }: Props) => {
     const selectYear = (e: React.MouseEvent<HTMLButtonElement>, year: string) => {
         e.preventDefault();
         setCurrYear(parseInt(year));
+        const yearInLink = parseInt(currMonthYear.slice(2));
+        const monthInLink = parseInt(currMonthYear.slice(0, 2));
+        parseInt(year) == yearInLink ? setCurrMonth(monthInLink) : setCurrMonth(-1);
     };
 
     const redirectToMonth = (e: React.MouseEvent<HTMLButtonElement>, key: string) => {
