@@ -16,6 +16,9 @@ async function getData() {
             link: true,
             hasBlog: true,
         },
+        where: {
+            visible: true,
+        },
         orderBy: { order: 'asc' },
     });
     return res;

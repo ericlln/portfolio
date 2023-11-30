@@ -5,8 +5,8 @@ import Skills from './Skills';
 
 interface CardProps {
     id: number;
-    title: string;
-    description: string;
+    title: string | null;
+    description: string | null;
     skills?: string | null;
     thumbnail?: string | null;
     link?: string | null;
@@ -25,7 +25,7 @@ export default function Card({
     i,
 }: CardProps) {
     return (
-        <div className="flex flex-col rounded-lg bg-gray-100 p-8 xl:flex-row xl:space-x-10">
+        <div className="flex flex-col rounded-lg bg-gray-100 p-8 ring-2 ring-inset ring-gray-300 xl:flex-row xl:space-x-10">
             <div className="basis-11/12 flex-col">
                 <div className="flex">
                     <h1 className="mb-4 mr-1 text-xl font-semibold">{title}</h1>
@@ -51,11 +51,11 @@ export default function Card({
 
                 <Skills skills={skills} />
 
-                <p className="mb-2 text-sm leading-8">{description}</p>
+                <p className="mb-3 text-sm leading-8">{description}</p>
                 {hasBlog && (
                     <Link
                         href={`/projects/${id}`}
-                        className="text-semibold text-sm text-cyan-800 underline duration-100 ease-in hover:no-underline"
+                        className="text-sm text-highlight underline duration-150 ease-in hover:no-underline"
                     >
                         Learn More
                     </Link>
