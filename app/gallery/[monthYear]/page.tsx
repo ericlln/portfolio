@@ -72,8 +72,8 @@ export default async function Photos({ params }: { params: { monthYear: string }
                     ) : (
                         <>
                             <div className="flex h-screen">
-                                <div className="m-auto">
-                                    <h1 className=" mb-4 text-2xl font-semibold text-gray-500">
+                                <div className="top-1/2 mx-12 mt-8 sm:m-auto sm:mt-0">
+                                    <h1 className="mb-4 text-2xl font-semibold text-gray-500">
                                         There are no photos here. Pick another month from below.
                                     </h1>
                                     <GalleryControls
