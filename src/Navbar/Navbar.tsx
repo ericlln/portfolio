@@ -5,10 +5,10 @@ const Navbar = () => {
     return (
         <nav className="sticky top-0 z-50 border-b-2 border-gray-300 backdrop-blur backdrop-filter duration-200 ease-in hover:bg-white hover:backdrop-blur-none">
             <div className="mx-auto px-0 py-3 sm:px-12">
-                <div className="flex justify-center sm:justify-between">
+                <div className="mx-4 flex justify-between sm:mx-0">
                     <Link href="/">
-                        <div className="mt-1 flex h-max rounded-full px-1 py-0.5 text-gray-500 ring-2 ring-highlight duration-100 ease-in hover:bg-highlight hover:text-white sm:px-6">
-                            <button type="button" className="">
+                        <div className="ml-4 mt-1 flex h-max w-20 justify-center rounded-full px-1 py-0.5 text-gray-500 ring-2 ring-highlight duration-100 ease-in sm:ml-0 sm:w-auto sm:px-6 sm:hover:bg-highlight sm:hover:text-white">
+                            <button>
                                 <svg
                                     aria-hidden="true"
                                     className="h-6 w-6"
