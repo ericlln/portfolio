@@ -14,7 +14,7 @@ datasource db {
 model gallery {
 id            Int   @default(autoincrement()) @id
 url           String
-dateAdded     DateTime?
+dateAdded     DateTime
 }
 
 model projects {
