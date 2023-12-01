@@ -22,24 +22,32 @@ const GalleryControls = ({ monthYears, currMonthYear }: Props) => {
 
     return (
         <>
-            <div className="mb-6 w-auto">
+            <div className="mb-6">
                 <button
                     type="button"
                     onClick={toggleModal}
-                    className="inline-flex gap-x-2 rounded-md bg-white px-3 py-2 text-xl font-semibold text-gray-900 ring-1 ring-inset ring-gray-300"
+                    className="inline-flex w-full scale-100 transform gap-x-2 rounded-md bg-white px-3 py-2 text-xl font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 duration-150 ease-in sm:w-auto sm:hover:bg-highlight sm:hover:text-white"
                 >
                     {`${monthString} ${year}`}
                     <svg
-                        className="mr-1 h-5 w-5 text-gray-400"
-                        viewBox="0 0 20 20"
+                        className="h-7 w-6"
+                        viewBox="0 -960 960 960"
                         fill="currentColor"
                         aria-hidden="true"
                     >
-                        <path
-                            fillRule="evenodd"
-                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                            clipRule="evenodd"
-                        />
+                        {modal ? (
+                            <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z"
+                            />
+                        ) : (
+                            <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"
+                            />
+                        )}
                     </svg>
                 </button>
                 <div>
