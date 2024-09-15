@@ -10,7 +10,7 @@ const Heading = () => {
                     Eric Lin
                 </h1>
                 <h2 className="mb-4 text-center font-sans text-lg font-semibold text-highlight sm:text-left">
-                    2A Systems Design Engineering @ UW
+                    2B Systems Design Engineering @ UW
                 </h2>
                 <div className="mb-8 flex justify-center sm:justify-start">
                     <Socials />
