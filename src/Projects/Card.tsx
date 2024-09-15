@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Skills from './Skills';
+import classNames from 'classnames';
 
 interface CardProps {
     id: number;
@@ -25,7 +26,7 @@ export default function Card({
     i,
 }: CardProps) {
     return (
-        <div className="flex flex-col rounded-lg bg-gray-100 p-8 ring-2 ring-inset ring-gray-300 xl:flex-row xl:space-x-10">
+        <div className="flex w-full flex-col rounded-lg bg-gray-100 p-8 ring-2 ring-inset ring-gray-300 xl:flex-row xl:space-x-10">
             <div className="basis-11/12 flex-col">
                 <div className="flex">
                     <h1 className="mb-4 mr-1 text-xl font-semibold">{title}</h1>
@@ -62,17 +63,35 @@ export default function Card({
                 )}
             </div>
 
-            <div className="order-first mb-6 flex basis-1/2 justify-items-center xl:order-last xl:mb-0 xl:justify-end">
-                {thumbnail && (
-                    <Image
-                        src={thumbnail}
-                        alt="alt"
-                        width={300}
-                        height={0}
-                        className="shrink-0 basis-1/2 self-start shadow-md shadow-gray-600"
-                    />
-                )}
-            </div>
+            {thumbnail && (
+                <div
+                    className={classNames({
+                        'order-first mb-6 flex basis-1/2 justify-items-center hover:cursor-not-allowed xl:order-last xl:mb-0 xl:justify-end':
+                            true,
+                        'duration-150 ease-in hover:scale-105': link,
+                    })}
+                >
+                    {link ? (
+                        <Link href={link}>
+                            <Image
+                                src={thumbnail}
+                                alt="alt"
+                                width={300}
+                                height={0}
+                                className="shrink-0 basis-1/2 self-start shadow-md shadow-gray-600"
+                            />
+                        </Link>
+                    ) : (
+                        <Image
+                            src={thumbnail}
+                            alt="alt"
+                            width={300}
+                            height={0}
+                            className="shrink-0 basis-1/2 self-start shadow-md shadow-gray-600"
+                        />
+                    )}
+                </div>
+            )}
         </div>
     );
 }
